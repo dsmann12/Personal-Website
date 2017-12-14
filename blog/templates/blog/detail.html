@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+<div class="ui two column equal width grid container" style="margin-top: 20px">
+    <div class="post">
+        <div class="ui image">
+            <img src="{{ post.heading_image.url }}">
+        </div>
+        <div class="ui attached segment" style="margin-bottom: 40px;">
+            <a href="{% url 'blog:detail' post.id %}"><h2 class="heading">{{ post.heading }}</h2></a>
+            <div class="meta">
+                <span class="author">By {{ post.author }}</span>
+                <span>{{ post.pub_date }}</span>
+            </div>
+            <div class="description">
+                <p>{{ post.post_text | safe | linebreaks }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+    {% if page_obj %}
+    
+    <div class="ui two column equal width grid container" style="margin-top: 20px">
+        <div class="column">
+            {% for post in page_obj %}
+            <div class="post">
+                <div class="ui image">
+                    <img src="{{ post.heading_image.url }}">
+                </div>
+                <div class="ui attached segment" style="margin-bottom: 40px;">
+                    <a href="{% url 'blog:detail' post.id %}"><h2 class="heading">{{ post.heading }}</h2></a>
+                    <div class="meta">
+                        <span class="author">By {{ post.author }}</span>
+                        <span>{{ post.pub_date }}</span>
+                    </div>
+                    <div class="description">
+                        <p>{{ post.excerpt | safe | linebreaks }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <!-- Navigation for pagination -->
+            <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}">
+                            <button class="ui left floated secondary button">
+                                Previous
+                            </button>
+                        </a>
+                    {% endif %}
+            
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">
+                            <button class="ui right floated secondary button">
+                                Next
+                            </button>
+                        </a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+        
+        <div class="four wide column about">
+            <div class="ui card">
+                <div class="image">
+                    <img src="https://s3.us-east-2.amazonaws.com/dscheuermann-assets/static/profile.png" class="ui medium image">
+                </div>
+                <div class="content">
+                    <a><h2 class="heading">About Me</h2></a>
+                    <div class="meta"></div>
+                    <div class="description">
+                        <p style="white-space: pre-line">Hi! My name is David Scheuermann.
+    
+                            I'm a budding software developer ready to take the skills I've learned and apply them in a professional environment.
+    
+                            This website was made to showcase my abilities with basic html, css, as well as my basic understanding of the Django framework.
+    
+                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc et consectetur metus, id ullamcorper lorem. Maecenas bibendum mollis nisl in elementum. Vivamus consequat neque nec magna porta imperdiet. Duis malesuada libero vel lacus ornare sollicitudin. Etiam quis consectetur sapien. Integer tortor nulla, rhoncus ac volutpat et, pulvinar quis enim. Proin posuere at mi non cursus. Maecenas sed purus eu nulla consequat euismod. Nam porta aliquam diam, eget tristique odio sollicitudin et. Proin consequat ultrices nunc, in commodo ligula consequat quis. Vestibulum laoreet egestas nisi in iaculis. Nulla gravida sollicitudin lacus, eu viverra metus pretium non. Ut vel eros convallis, pretium velit sed, aliquam nisl. Pellentesque tincidunt porta diam id mollis.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <p>No posts are available</p>
+    {% endif %}
+
+{% endblock %}

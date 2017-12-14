@@ -1,0 +1,82 @@
+body {
+	background-color: #000000;
+	font-family: 'Squada One', cursive; 
+}
+
+#background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: auto;
+	opacity: 0.4;
+	background-size: cover;
+	min-height: 100%;
+}
+
+#logo {
+	width: 500px;
+	margin: 10% auto;
+}
+
+#box {
+	color: white;
+	text-align: center;
+	border: 10px solid white;
+	margin-bottom: 10px;
+}
+
+#box h1 {
+	margin: 0;
+	line-height: .85;
+	font-size: 20em;
+	font-family: inherit;
+}
+
+#box p {
+	margin: 0;
+	font-size: 4em;
+}
+
+.ui.inverted.menu {
+	font-family: 'Squada One', cursive;
+	font-size: 2em;
+	background: rgba(0, 0, 0, 0);
+	padding: 10px;
+}
+
+
+
+#left {
+	float: left;
+}
+
+#right {
+	float: right;
+}
+
+
+.but {
+	color: white;
+	background: none;
+	border: 7px solid white;
+	font-size: 3em;
+	width: 45%;
+	font-family: 'Squada One', cursive;
+	padding: 10px;
+}
+
+.but:hover {
+	background: white;
+	color: #000000;
+}
+
+#buttons {
+	overflow: hidden;
+}
+
+.ui.inverted.menu .header.item  {
+	font-size: 2em;
+	padding: 10px;
+}
