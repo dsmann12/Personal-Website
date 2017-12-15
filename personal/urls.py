@@ -25,4 +25,6 @@ urlpatterns = [
     url(r'^blog/', include('blog.urls'), name='blog'),
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name='landing.html'), name='landing')
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
+
+#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
