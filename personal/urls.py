@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^blog/', include('blog.urls'), name='blog'),
+    url(r'^movies/', include('movies.urls'), name='movies'),
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name='landing.html'), name='landing'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
