@@ -16,8 +16,8 @@
 			<div class="right menu" style="font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 0.75em; letter-spacing: 2px;">
 				{% load static %}
 				<a class="item" href="{% url 'blog:index' %}">HOME</a>
-				<a class="item" href="https://superimposing.wordpress.com/">MOVIES</a>
-				<a class="item" href="#">GAMES</a>
+				<a class="item" href="{% url 'movies:index' %}">MOVIES</a>
+				<a class="item" href="https://superimposing.wordpress.com/">GAMES</a>
 				<a class="item" href="{% static 'resume.pdf' %}">RESUME</a>
 				<a class="item">ABOUT</a>
 			</div>
