@@ -59,12 +59,13 @@ body {
 }
 
 .post {
-	background-color: black;
+	background-color: #222;
 	min-height: 600px;
 	height: 100%;
 	width: 100%;
 	z-index: 1;
 	position: relative;
+	padding: 54px 0;
 }
 
 .post-background {
