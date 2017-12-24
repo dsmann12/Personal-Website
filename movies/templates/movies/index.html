@@ -22,7 +22,7 @@
 			<div class="post-background" style="background-image: url('{{ review.heading_image.url }}')"></div>
 			<div class="post-info">
 				<h1>{{ review.title }}</h1>
-				<p>{{ review.excerpt }}</p>
+				<p>{{ review.excerpt | linebreaks }}</p>
 				<a href="{% url 'movies:detail' review.id %}">Read More   <i class="fa fa-long-arrow-right" style="margin-left: 5px"></i></a>
 			</div>
         </article>
