@@ -1,0 +1,11 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "BrickBreaker_Web.data.unityweb",
+"asmCodeUrl": "BrickBreaker_Web.asm.code.unityweb",
+"asmMemoryUrl": "BrickBreaker_Web.asm.memory.unityweb",
+"asmFrameworkUrl": "BrickBreaker_Web.asm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

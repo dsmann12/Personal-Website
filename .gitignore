@@ -3,3 +3,4 @@ venv
 staticfiles
 .env
 media
+personal/local.py.bak
