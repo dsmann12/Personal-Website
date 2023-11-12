@@ -4,6 +4,12 @@ A website created in Django as a personal project for storing personal informati
 
 # Setting up virtual environment for Python development
 
+`python -m venv [virtual-environment-dir]`
+
+# Running virtual environment
+
+`source [virtual-environment-dir]/bin/activate`
+
 # Installing Django
 
 `python3 -m pip install Django`
