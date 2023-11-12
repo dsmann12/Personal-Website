@@ -50,3 +50,7 @@ Add the apps
 # Run Server
 
 `python manage.py runserver`
+
+# Notes for Production
+
+Make sure to install Apache and mod_wsgi. See Django docs on installing Django
