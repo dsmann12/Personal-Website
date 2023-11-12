@@ -1,6 +1,7 @@
-venv
+.venv
 *.pyc
 staticfiles
 .env
 media
 personal/local.py.bak
+.vscode
