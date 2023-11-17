@@ -5,3 +5,4 @@ staticfiles
 media
 personal/local.py.bak
 .vscode
+.pgpass
